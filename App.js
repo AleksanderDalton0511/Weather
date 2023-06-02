@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 
 export default function App() {
   const[results, setResults] = useState('');
-  let city = "Tallinn";
+  const[city, setCity] = useState('');
 
 var today = new Date();
 var dd = today.getDate();
@@ -45,7 +45,7 @@ useEffect(() => {
   return (
     <View style={styles.container}>
       <Text style={{color: 'lawngreen'}}>CHOOSE YOUR CITY:</Text>
-      <TextInput value={city} style={{backgroundColor: 'darkgrey', width: "40%", marginTop: "3%"}}></TextInput>
+      <TextInput onChangeText={newText => setCity(newText)} style={{backgroundColor: 'darkgrey', width: "40%", marginTop: "3%"}}></TextInput>
       <Text style={{color: 'lawngreen'}}>{results}</Text>
       <StatusBar style="auto" />
     </View>
