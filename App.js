@@ -3,7 +3,7 @@ import { StyleSheet, Text, TextInput, View } from 'react-native';
 import React, { useEffect, useState } from 'react';
 
 export default function App() {
-  const[results, setResults] = useState();
+  const[results, setResults] = useState('');
   let city = "Tallinn";
 
 var today = new Date();
@@ -19,9 +19,8 @@ if(mm<10)
     mm='0'+mm;
 } 
 today = mm+'-'+dd+'-'+yyyy;
-console.log(today);
 
-const request = async () => {const url = 'https://weatherapi-com.p.rapidapi.com/forecast.json?q=' + city + '&days=3&dt=' + today;
+const request = async () => {const url = 'https://weatherapi-com.p.rapidapi.com/forecast.json?q=' + city + '&days=3=' + today;
 const options = {
 	method: 'GET',
 	headers: {
@@ -39,7 +38,9 @@ try {
 	console.error(error);
 }
 }
-request();
+useEffect(() => {
+    request();
+  });
 
   return (
     <View style={styles.container}>
