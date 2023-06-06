@@ -53,6 +53,7 @@ useEffect(() => {
     return (
       <View style={styles.container}>
         {results.current.temp_c}
+        {results.current.condition.text}
         <StatusBar style="auto" />
       </View>
     );
