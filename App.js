@@ -3,8 +3,8 @@ import { StyleSheet, Text, TextInput, View } from 'react-native';
 import React, { useEffect, useState } from 'react';
 
 export default function App() {
-  const[results, setResults] = useState('');
-  const[city, setCity] = useState('');
+  const[results, setResults] = useState([]);
+  const[city, setCity] = useState('Tallinn');
 
 var today = new Date();
 var dd = today.getDate();
@@ -31,9 +31,10 @@ const options = {
 
 try {
 	const response = await fetch(url, options);
-	const result = await response.text();
-	console.log(result);
-  setResults(result);
+	const result = await response.json();
+  console.log(result);
+  let dataKeys = Object.keys(result);
+  setResults(dataKeys);
 } catch (error) {
 	console.error(error);
 }
@@ -42,14 +43,26 @@ useEffect(() => {
     request();
   });
 
-  return (
-    <View style={styles.container}>
-      <Text style={{color: 'lawngreen'}}>CHOOSE YOUR CITY:</Text>
-      <TextInput onChangeText={newText => setCity(newText)} style={{backgroundColor: 'darkgrey', width: "40%", marginTop: "3%"}}></TextInput>
-      <Text style={{color: 'lawngreen'}}>{results}</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  const [selected, setSelected] = useState(true);
+
+  if (selected){
+    return (
+      <View style={styles.container}>
+        {results}
+        <StatusBar style="auto" />
+      </View>
+    );
+  }
+  else{
+    return (
+      <View style={styles.container}>
+        <Text style={{color: 'lawngreen'}}>CHOOSE YOUR CITY:</Text>
+        <TextInput onChangeText={newText => setCity(newText)} style={{backgroundColor: 'darkgrey', width: "40%", marginTop: "3%"}}></TextInput>
+        <StatusBar style="auto" />
+      </View>
+    );
+  }
+  
 }
 
 const styles = StyleSheet.create({
