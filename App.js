@@ -1,10 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, TextInput, View } from 'react-native';
 import React, { useEffect, useState } from 'react';
+import { Button } from 'react-native-web';
 
 export default function App() {
   const[results, setResults] = useState([]);
-  const[city, setCity] = useState('Tallinn');
+  const[city, setCity] = useState('');
 
 var today = new Date();
 var dd = today.getDate();
@@ -43,7 +44,11 @@ useEffect(() => {
     request();
   });
 
-  const [selected, setSelected] = useState(true);
+  function show(){
+    setSelected(true);
+  }
+
+  const [selected, setSelected] = useState(false);
 
   if (selected){
     return (
@@ -57,6 +62,7 @@ useEffect(() => {
     return (
       <View style={styles.container}>
         <Text style={{color: 'lawngreen'}}>CHOOSE YOUR CITY:</Text>
+        <Button onPress={() => show()}>Search</Button>
         <TextInput onChangeText={newText => setCity(newText)} style={{backgroundColor: 'darkgrey', width: "40%", marginTop: "3%"}}></TextInput>
         <StatusBar style="auto" />
       </View>
