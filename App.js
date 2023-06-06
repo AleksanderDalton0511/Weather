@@ -35,6 +35,7 @@ try {
 	const result = await response.json();
   console.log(result);
   let dataKeys = Object.keys(result.current);
+  console.log(dataKeys);
   setResults(dataKeys);
 } catch (error) {
 	console.error(error);
@@ -53,7 +54,7 @@ useEffect(() => {
   if (selected){
     return (
       <View style={styles.container}>
-        {results}
+        {results[2]}
         <StatusBar style="auto" />
       </View>
     );
