@@ -34,7 +34,7 @@ try {
 	const response = await fetch(url, options);
 	const result = await response.json();
   console.log(result);
-  let dataKeys = Object.keys(result);
+  let dataKeys = Object.keys(result.current);
   setResults(dataKeys);
 } catch (error) {
 	console.error(error);
