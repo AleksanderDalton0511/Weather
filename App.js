@@ -57,17 +57,17 @@ useEffect(() => {
       </View>
     );
   }
+
   else{
     return (
       <View style={styles.container}>
         <Text style={{color: 'lawngreen'}}>CHOOSE YOUR CITY:</Text>
-        <Button onPress={show()}>Search</Button>
+        <Button onPress={() => show()}>Search</Button>
         <TextInput onChangeText={newText => setCity(newText)} style={{backgroundColor: 'darkgrey', width: "40%", marginTop: "3%"}}></TextInput>
         <StatusBar style="auto" />
       </View>
     );
   }
-  
 }
 
 const styles = StyleSheet.create({
