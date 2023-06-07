@@ -48,13 +48,24 @@ useEffect(() => {
   const [selected, setSelected] = useState(false);
 
   if (selected){
+    try{
     return (
       <View style={styles.container}>
         <Text>{results.current.temp_c}</Text>
         <Text>{results.current.condition.text}</Text>
         <StatusBar style="auto" />
       </View>
-    );
+    )}
+    catch (error) {
+      return (
+        <View style={styles.container}>
+          <Text style={{color: 'lawngreen'}}>CHOOSE YOUR CITY:</Text>
+          <TextInput onSubmitEditing = {() => show()} onChangeText={newText => setCity(newText)} style={{backgroundColor: 'darkgrey', width: "40%", marginTop: "3%", textAlign:"center"}}></TextInput>
+          <Text style={{color: "red"}}>Such city does not exist!</Text>
+          <StatusBar style="auto" />
+        </View>
+      );
+    }
   }
 
   else{
