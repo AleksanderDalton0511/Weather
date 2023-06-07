@@ -33,7 +33,6 @@ const options = {
 try {
 	const response = await fetch(url, options);
 	const result = await response.json();
-  console.log(result);
   setResults(result);
 } catch (error) {
 	console.error(error);
@@ -52,8 +51,8 @@ useEffect(() => {
   if (selected){
     return (
       <View style={styles.container}>
-        {results.current.temp_c}
-        {results.current.condition.text}
+        <Text>{results.current.temp_c}</Text>
+        <Text>{results.current.condition.text}</Text>
         <StatusBar style="auto" />
       </View>
     );
