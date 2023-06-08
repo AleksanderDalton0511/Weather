@@ -45,7 +45,7 @@ useEffect(() => {
 
   if (selected){
     try{
-      const locat = <Text style={{color: "darkgrey"}}>{results.location.name}</Text>
+      const locat = <Text style={{color: "red"}}>{results.location.name}</Text>
     return (
       <View style={styles.container}>
         <TouchableOpacity onPress={() => setSelected(false)} style={{marginRight: "80%"}}><Text style={{color: "lawngreen"}}>B A C K {locat}</Text></TouchableOpacity>
@@ -55,13 +55,31 @@ useEffect(() => {
         <DataTable>
 
         <DataTable.Row>
-        <DataTable.Cell>CURRENTLY:</DataTable.Cell>
+        <DataTable.Cell>NOW:</DataTable.Cell>
+        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
+        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
+      </DataTable.Row>
+
+        <DataTable.Row>
+        <DataTable.Cell>DAY DURATION:</DataTable.Cell>
+        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
+        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
+      </DataTable.Row>
+
+    </DataTable>
+
+
+
+    <DataTable style={{paddingTop: "30%"}}>
+
+        <DataTable.Row>
+        <DataTable.Cell>00:00</DataTable.Cell>
         <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
         <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
       </DataTable.Row>
 
       <DataTable.Row>
-        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
+        <DataTable.Cell>03:00</DataTable.Cell>
         <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
         <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
       </DataTable.Row>
