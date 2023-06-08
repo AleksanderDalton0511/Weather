@@ -55,7 +55,7 @@ useEffect(() => {
         <DataTable>
 
         <DataTable.Row>
-        <DataTable.Cell><Text style={{color: "red"}}>N0W</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "cadetblue"}}>N0W</Text></DataTable.Cell>
         <DataTable.Cell><Text style={{color: "lawngreen"}}>{results.current.temp_c} C</Text></DataTable.Cell>
         <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
       </DataTable.Row>
@@ -70,7 +70,7 @@ useEffect(() => {
 
 
 
-    <DataTable style={{paddingTop: "30%"}}>
+    <DataTable style={{marginTop: "30%", backgroundColor: "darkgrey"}}>
 
         <DataTable.Row>
         <DataTable.Cell>00:00</DataTable.Cell>
