@@ -53,8 +53,7 @@ useEffect(() => {
     try{
     return (
       <View style={styles.container}>
-        <TouchableOpacity onPress={() => setSelected(false)} style={{marginRight: "80%", marginBottom: "80%"}}><Text style={{color: "lawngreen"}}>B A C K {locat}</Text></TouchableOpacity>
-        <Text style={{marginLeft: "70%", marginBottom: "80%", backgroundColor: "red"}}>{results.location.name}</Text>
+        <TouchableOpacity onPress={() => setSelected(false)} style={{marginRight: "80%", marginBottom: "155%"}}><Text style={{color: "lawngreen"}}>B A C K {locat}</Text></TouchableOpacity>
         <Text>{results.current.temp_c}</Text>
         <Text>{results.current.condition.text}</Text>
         <StatusBar style="auto" />
