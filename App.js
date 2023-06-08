@@ -54,14 +54,10 @@ useEffect(() => {
 
         <DataTable>
 
-      <DataTable.Header style={styles.tableHeader}>
-        <DataTable.Title>{results.current.condition.text}</DataTable.Title>
-        <DataTable.Title>{results.current.temp_c}</DataTable.Title>
-        <DataTable.Title>Age</DataTable.Title>
-      </DataTable.Header>
-
-      <DataTable.Row>
-        
+        <DataTable.Row>
+        <DataTable.Cell>CURRENTLY:</DataTable.Cell>
+        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
+        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
       </DataTable.Row>
 
       <DataTable.Row>
