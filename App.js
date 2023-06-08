@@ -1,11 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, TextInput, View, Button, TouchableOpacity } from 'react-native';
 import React, { useEffect, useState } from 'react';
-
 export default function App() {
   const[results, setResults] = useState([]);
   const[city, setCity] = useState('');
-
 var today = new Date();
 var dd = today.getDate();
 var mm = today.getMonth()+1; 
@@ -19,7 +17,6 @@ if(mm<10)
     mm='0'+mm;
 } 
 today = mm+'-'+dd+'-'+yyyy;
-
 const request = async () => {const url = 'https://weatherapi-com.p.rapidapi.com/forecast.json?q=' + city + '&days=3=' + today;
 const options = {
 	method: 'GET',
@@ -28,7 +25,6 @@ const options = {
 		'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
 	}
 };
-
 try {
 	const response = await fetch(url, options);
 	const result = await response.json();
@@ -40,22 +36,20 @@ try {
 useEffect(() => {
     request();
   });
-
   function show(){
     setSelected(true);
   }
-
   const [selected, setSelected] = useState(false);
-
-  const locat = <Text style={{color: "red"}}>{results.location.name}</Text>
-
   if (selected){
     try{
     return (
       <View style={styles.container}>
-        <TouchableOpacity onPress={() => setSelected(false)} style={{marginRight: "80%", marginBottom: "155%"}}><Text style={{color: "lawngreen"}}>B A C K {locat}</Text></TouchableOpacity>
+        <TouchableOpacity onPress={() => setSelected(false)} style={{backgroundColor: "blue"}}><Text>dasdas</Text></TouchableOpacity>
+        <Text>{results.location.name}</Text>
+        <TouchableOpacity onPress={() => setSelected(false)} style={{marginRight: "80%", marginBottom: "80%"}}><Text style={{color: "lawngreen"}}>B A C K</Text></TouchableOpacity>
+        <Text style={{marginLeft: "70%", marginBottom: "80%", backgroundColor: "red"}}>{results.location.name}</Text>
         <Text>{results.current.temp_c}</Text>
-        <Text>{results.current.condition.text}</Text>
+        <Text>{results.current.condition.icon}</Text>
         <StatusBar style="auto" />
       </View>
     )}
@@ -70,7 +64,6 @@ useEffect(() => {
       );
     }
   }
-
   else{
     return (
       <View style={styles.container}>
@@ -81,7 +74,6 @@ useEffect(() => {
     );
   }
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
