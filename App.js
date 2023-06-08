@@ -55,13 +55,13 @@ useEffect(() => {
         <DataTable>
 
         <DataTable.Row>
-        <DataTable.Cell>NOW:</DataTable.Cell>
-        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>N0W</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "lawngreen"}}>{results.current.temp_c} C</Text></DataTable.Cell>
         <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
       </DataTable.Row>
 
         <DataTable.Row>
-        <DataTable.Cell>DAY DURATION:</DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>DAY DURATION:</Text></DataTable.Cell>
         <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
         <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
       </DataTable.Row>
