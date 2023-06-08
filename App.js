@@ -51,7 +51,7 @@ useEffect(() => {
     try{
     return (
       <View style={styles.container}>
-        <TouchableOpacity style={{backgroundColor: "blue"}}><Text>dasdas</Text></TouchableOpacity>
+        <TouchableOpacity onPress={() => setSelected(false)} style={{backgroundColor: "blue"}}><Text>dasdas</Text></TouchableOpacity>
         <Text>{results.location.name}</Text>
         <Text>{results.current.temp_c}</Text>
         <Text>{results.current.condition.text}</Text>
