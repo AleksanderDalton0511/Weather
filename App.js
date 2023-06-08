@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, TextInput, View, Button, TouchableOpacity } from 'react-native';
 import React, { useEffect, useState } from 'react';
+import { DataTable } from 'react-native-paper';
 export default function App() {
   const[results, setResults] = useState([]);
   const[city, setCity] = useState('');
@@ -48,8 +49,29 @@ useEffect(() => {
     return (
       <View style={styles.container}>
         <TouchableOpacity onPress={() => setSelected(false)} style={{marginRight: "80%"}}><Text style={{color: "lawngreen"}}>B A C K {locat}</Text></TouchableOpacity>
-        <Text>{results.current.temp_c}</Text>
-        <Text>{results.current.condition.text}</Text>
+        
+
+
+        <DataTable>
+
+      <DataTable.Header style={styles.tableHeader}>
+        <DataTable.Title>{results.current.condition.text}</DataTable.Title>
+        <DataTable.Title>{results.current.temp_c}</DataTable.Title>
+        <DataTable.Title>Age</DataTable.Title>
+      </DataTable.Header>
+
+      <DataTable.Row>
+        
+      </DataTable.Row>
+
+      <DataTable.Row>
+        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
+        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
+        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
+      </DataTable.Row>
+
+    </DataTable>
+
         <StatusBar style="auto" />
       </View>
     )}
