@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, TextInput, View, Button } from 'react-native';
+import { StyleSheet, Text, TextInput, View, Button, TouchableOpacity } from 'react-native';
 import React, { useEffect, useState } from 'react';
 
 export default function App() {
@@ -51,6 +51,8 @@ useEffect(() => {
     try{
     return (
       <View style={styles.container}>
+        <TouchableOpacity style={{backgroundColor: "blue"}}><Text>dasdas</Text></TouchableOpacity>
+        <Text>{results.location.name}</Text>
         <Text>{results.current.temp_c}</Text>
         <Text>{results.current.condition.text}</Text>
         <StatusBar style="auto" />
