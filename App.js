@@ -44,10 +44,10 @@ useEffect(() => {
 
   if (selected){
     try{
-      const locat = <Text style={{color: "red"}}>{results.location.name}</Text>
+      const locat = <Text style={{color: "darkgrey"}}>{results.location.name}</Text>
     return (
       <View style={styles.container}>
-        <TouchableOpacity onPress={() => setSelected(false)} style={{marginRight: "80%", marginBottom: "80%"}}><Text style={{color: "lawngreen"}}>B A C K {locat}</Text></TouchableOpacity>
+        <TouchableOpacity onPress={() => setSelected(false)} style={{marginRight: "80%"}}><Text style={{color: "lawngreen"}}>B A C K {locat}</Text></TouchableOpacity>
         <Text>{results.current.temp_c}</Text>
         <Text>{results.current.condition.text}</Text>
         <StatusBar style="auto" />
