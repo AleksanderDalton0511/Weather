@@ -55,13 +55,13 @@ useEffect(() => {
         <DataTable>
 
         <DataTable.Row>
-        <DataTable.Cell><Text style={{color: "cadetblue"}}>N0W</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "lawngreen"}}>{results.current.temp_c} C</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "blue"}}>N0W</Text></DataTable.Cell>
+        <DataTable.Cell><Text>{results.current.temp_c} C</Text></DataTable.Cell>
         <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
       </DataTable.Row>
 
         <DataTable.Row>
-        <DataTable.Cell><Text style={{color: "red"}}>DAY DURATION:</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "blue"}}>DAY DURATION:</Text></DataTable.Cell>
         <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
         <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
       </DataTable.Row>
@@ -70,7 +70,7 @@ useEffect(() => {
 
 
 
-    <DataTable style={{marginTop: "30%", backgroundColor: "darkgrey"}}>
+    <DataTable style={{marginTop: "30%", backgroundColor: "#7B858D"}}>
 
         <DataTable.Row>
         <DataTable.Cell>00:00</DataTable.Cell>
