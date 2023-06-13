@@ -61,14 +61,14 @@ useEffect(() => {
       </DataTable.Row>
 
         <DataTable.Row>
-        <DataTable.Cell><Text style={{color: "blue"}}>DAY DURATION:</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "blue"}}>DAYTIME</Text></DataTable.Cell>
         <DataTable.Cell>{results.forecast.forecastday[0].astro.sunrise}</DataTable.Cell>
         <DataTable.Cell>{results.forecast.forecastday[0].astro.sunset}</DataTable.Cell>
       </DataTable.Row>
 
     </DataTable>
 
-      <TouchableOpacity style={{backgroundColor: "lawngreen"}}><Text>fasfa</Text></TouchableOpacity>
+      <TouchableOpacity style={{backgroundColor: "lawngreen", paddingRight: "5%", paddingLeft: "5%"}}><Text>TODAY</Text></TouchableOpacity>
 
     <DataTable style={{marginTop: "30%", backgroundColor: "#7B858D"}}>
 
