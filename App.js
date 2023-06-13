@@ -68,7 +68,7 @@ useEffect(() => {
 
     </DataTable>
 
-
+      <TouchableOpacity style={{backgroundColor: "lawngreen"}}><Text>fasfa</Text></TouchableOpacity>
 
     <DataTable style={{marginTop: "30%", backgroundColor: "#7B858D"}}>
 
@@ -84,6 +84,48 @@ useEffect(() => {
         <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
       </DataTable.Row>
 
+      <DataTable.Row>
+        <DataTable.Cell>06:00</DataTable.Cell>
+        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
+        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
+      </DataTable.Row>
+
+      <DataTable.Row>
+        <DataTable.Cell>09:00</DataTable.Cell>
+        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
+        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
+      </DataTable.Row>
+
+      <DataTable.Row>
+        <DataTable.Cell>12:00</DataTable.Cell>
+        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
+        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
+      </DataTable.Row>
+
+      <DataTable.Row>
+        <DataTable.Cell>15:00</DataTable.Cell>
+        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
+        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
+      </DataTable.Row>
+
+      <DataTable.Row>
+        <DataTable.Cell>18:00</DataTable.Cell>
+        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
+        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
+      </DataTable.Row>
+
+      <DataTable.Row>
+        <DataTable.Cell>21:00</DataTable.Cell>
+        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
+        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
+      </DataTable.Row>
+
+      <DataTable.Row>
+        <DataTable.Cell>23:00</DataTable.Cell>
+        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
+        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
+      </DataTable.Row>
+
     </DataTable>
 
         <StatusBar style="auto" />
@@ -93,7 +135,7 @@ useEffect(() => {
       return (
         <View style={styles.container}>
           <Text style={{color: 'lawngreen'}}>CHOOSE YOUR CITY:</Text>
-          <TextInput onSubmitEditing = {() => show()} onChangeText={newText => setCity(newText)} style={{backgroundColor: 'darkgrey', width: "40%", marginTop: "3%", textAlign:"center"}}></TextInput>
+          <TextInput onSubmitEditing = {() => show()} onChangeText={newText => setCity(newText)} style={{backgroundColor: 'darkgrey', width: "40%", marginTop: "3%", textAlign:"center", color: "lawngreen", textDecoration: "none"}}></TextInput>
           <Text style={{color: "red"}}>Such city does not exist!</Text>
           <StatusBar style="auto" />
         </View>
@@ -104,7 +146,7 @@ useEffect(() => {
     return (
       <View style={styles.container}>
         <Text style={{color: 'lawngreen'}}>CHOOSE YOUR CITY:</Text>
-        <TextInput onSubmitEditing = {() => show()} onChangeText={newText => setCity(newText)} style={{backgroundColor: 'darkgrey', width: "40%", marginTop: "3%", textAlign:"center", color: "lawngreen"}}></TextInput>
+        <TextInput onSubmitEditing = {() => show()} onChangeText={newText => setCity(newText)} style={{backgroundColor: 'darkgrey', width: "40%", marginTop: "3%", textAlign:"center", color: "lawngreen", textDecoration: "none"}}></TextInput>
         <StatusBar style="auto" />
       </View>
     );
