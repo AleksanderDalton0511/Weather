@@ -62,8 +62,8 @@ useEffect(() => {
 
         <DataTable.Row>
         <DataTable.Cell><Text style={{color: "blue"}}>DAY DURATION:</Text></DataTable.Cell>
-        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
-        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
+        <DataTable.Cell>{results.forecast.forecastday[0].astro.sunrise}</DataTable.Cell>
+        <DataTable.Cell>{results.forecast.forecastday[0].astro.sunset}</DataTable.Cell>
       </DataTable.Row>
 
     </DataTable>
