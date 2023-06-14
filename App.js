@@ -52,7 +52,7 @@ useEffect(() => {
         
 
 
-        <DataTable>
+        <DataTable style={{marginBottom: "20%", borderColor: "red"}}>
 
         <DataTable.Row>
         <DataTable.Cell><Text style={{color: "blue"}}>N0W</Text></DataTable.Cell>
@@ -68,9 +68,9 @@ useEffect(() => {
 
     </DataTable>
 
-      <TouchableOpacity style={{backgroundColor: "lawngreen", paddingRight: "5%", paddingLeft: "5%"}}><Text>TODAY</Text></TouchableOpacity>
+      <TouchableOpacity style={{backgroundColor: "darkgrey", paddingRight: "5%", paddingLeft: "5%"}}><Text style={{color: "red"}}>TODAY</Text></TouchableOpacity>
 
-    <DataTable style={{marginTop: "30%", backgroundColor: "#7B858D"}}>
+    <DataTable style={{marginTop: "20%", backgroundColor: "#7B858D"}}>
 
         <DataTable.Row>
         <DataTable.Cell>00:00</DataTable.Cell>
