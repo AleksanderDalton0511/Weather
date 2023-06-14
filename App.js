@@ -52,7 +52,7 @@ useEffect(() => {
         
 
 
-        <DataTable style={{marginBottom: "25%", borderColor: "red"}}>
+        <DataTable style={{marginBottom: "25%"}}>
 
         <DataTable.Row>
         <DataTable.Cell><Text style={{color: "blue"}}>N0W</Text></DataTable.Cell>
@@ -135,7 +135,7 @@ useEffect(() => {
       return (
         <View style={styles.container}>
           <Text style={{color: 'lawngreen'}}>CHOOSE YOUR CITY:</Text>
-          <TextInput onSubmitEditing = {() => show()} onChangeText={newText => setCity(newText)} style={{backgroundColor: 'darkgrey', width: "40%", marginTop: "3%", textAlign:"center", color: "lawngreen", textDecoration: "none"}}></TextInput>
+          <TextInput onSubmitEditing = {() => show()} onChangeText={newText => setCity(newText)} style={{backgroundColor: 'darkgrey', width: "40%", marginTop: "3%", textAlign:"center", color: "red", textDecoration: "none"}}></TextInput>
           <Text style={{color: "red"}}>Such city does not exist!</Text>
           <StatusBar style="auto" />
         </View>
@@ -146,7 +146,7 @@ useEffect(() => {
     return (
       <View style={styles.container}>
         <Text style={{color: 'lawngreen'}}>CHOOSE YOUR CITY:</Text>
-        <TextInput onSubmitEditing = {() => show()} onChangeText={newText => setCity(newText)} style={{backgroundColor: 'darkgrey', width: "40%", marginTop: "3%", textAlign:"center", color: "lawngreen", textDecoration: "none"}}></TextInput>
+        <TextInput onSubmitEditing = {() => show()} onChangeText={newText => setCity(newText)} style={{backgroundColor: 'darkgrey', width: "40%", marginTop: "3%", textAlign:"center", color: "red", textDecoration: "none"}}></TextInput>
         <StatusBar style="auto" />
       </View>
     );
