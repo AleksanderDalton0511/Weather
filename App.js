@@ -74,56 +74,56 @@ useEffect(() => {
 
         <DataTable.Row>
         <DataTable.Cell>00:00</DataTable.Cell>
-        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
-        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
       </DataTable.Row>
 
       <DataTable.Row>
         <DataTable.Cell>03:00</DataTable.Cell>
-        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
-        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
       </DataTable.Row>
 
       <DataTable.Row>
         <DataTable.Cell>06:00</DataTable.Cell>
-        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
-        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
       </DataTable.Row>
 
       <DataTable.Row>
         <DataTable.Cell>09:00</DataTable.Cell>
-        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
-        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
       </DataTable.Row>
 
       <DataTable.Row>
         <DataTable.Cell>12:00</DataTable.Cell>
-        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
-        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
       </DataTable.Row>
 
       <DataTable.Row>
         <DataTable.Cell>15:00</DataTable.Cell>
-        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
-        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
       </DataTable.Row>
 
       <DataTable.Row>
         <DataTable.Cell>18:00</DataTable.Cell>
-        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
-        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
       </DataTable.Row>
 
       <DataTable.Row>
         <DataTable.Cell>21:00</DataTable.Cell>
-        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
-        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
       </DataTable.Row>
 
       <DataTable.Row>
         <DataTable.Cell>23:00</DataTable.Cell>
-        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
-        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
       </DataTable.Row>
 
     </DataTable>
