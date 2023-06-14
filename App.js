@@ -45,7 +45,7 @@ useEffect(() => {
 
   if (selected){
     try{
-      const locat = <Text style={{color: "red"}}>{results.location.name}</Text>
+      const locat = <Text style={{color: "blue"}}>{results.location.name}</Text>
     return (
       <View style={styles.container}>
         <TouchableOpacity onPress={() => setSelected(false)} style={{marginRight: "80%"}}><Text style={{color: "lawngreen"}}>B A C K {locat}</Text></TouchableOpacity>
@@ -55,15 +55,15 @@ useEffect(() => {
         <DataTable style={{marginBottom: "25%"}}>
 
         <DataTable.Row>
-        <DataTable.Cell><Text style={{color: "blue"}}>N0W</Text></DataTable.Cell>
-        <DataTable.Cell><Text>{results.current.temp_c} C</Text></DataTable.Cell>
-        <DataTable.Cell>{results.current.condition.text}</DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>N0W</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "white"}}>{results.current.temp_c} C</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "white"}}>{results.current.condition.text}</Text></DataTable.Cell>
       </DataTable.Row>
 
         <DataTable.Row>
-        <DataTable.Cell><Text style={{color: "blue"}}>DAYTIME</Text></DataTable.Cell>
-        <DataTable.Cell>{results.forecast.forecastday[0].astro.sunrise}</DataTable.Cell>
-        <DataTable.Cell>{results.forecast.forecastday[0].astro.sunset}</DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>DAYTIME</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "white"}}>{results.forecast.forecastday[0].astro.sunrise}</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "white"}}>{results.forecast.forecastday[0].astro.sunset}</Text></DataTable.Cell>
       </DataTable.Row>
 
     </DataTable>
@@ -73,55 +73,55 @@ useEffect(() => {
     <DataTable style={{marginTop: "5%", backgroundColor: "#7B858D"}}>
 
         <DataTable.Row>
-        <DataTable.Cell>00:00</DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "white"}}>00:00</Text></DataTable.Cell>
         <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
         <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
       </DataTable.Row>
 
       <DataTable.Row>
-        <DataTable.Cell>03:00</DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "white"}}>03:00</Text></DataTable.Cell>
         <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
         <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
       </DataTable.Row>
 
       <DataTable.Row>
-        <DataTable.Cell>06:00</DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "white"}}>06:00</Text></DataTable.Cell>
         <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
         <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
       </DataTable.Row>
 
       <DataTable.Row>
-        <DataTable.Cell>09:00</DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "white"}}>09:00</Text></DataTable.Cell>
         <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
         <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
       </DataTable.Row>
 
       <DataTable.Row>
-        <DataTable.Cell>12:00</DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "white"}}>12:00</Text></DataTable.Cell>
         <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
         <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
       </DataTable.Row>
 
       <DataTable.Row>
-        <DataTable.Cell>15:00</DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "white"}}>15:00</Text></DataTable.Cell>
         <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
         <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
       </DataTable.Row>
 
       <DataTable.Row>
-        <DataTable.Cell>18:00</DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "white"}}>18:00</Text></DataTable.Cell>
         <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
         <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
       </DataTable.Row>
 
       <DataTable.Row>
-        <DataTable.Cell>21:00</DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "white"}}>21:00</Text></DataTable.Cell>
         <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
         <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
       </DataTable.Row>
 
       <DataTable.Row>
-        <DataTable.Cell>23:00</DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "white"}}>23:00</Text></DataTable.Cell>
         <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
         <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
       </DataTable.Row>
