@@ -45,7 +45,7 @@ useEffect(() => {
 
   if (selected){
     try{
-      const locat = <Text style={{color: "blue"}}>{results.location.name}</Text>
+      const locat = <Text style={{color: "red"}}>{results.location.name}</Text>
     return (
       <View style={styles.container}>
         <TouchableOpacity onPress={() => setSelected(false)} style={{marginRight: "80%"}}><Text style={{color: "lawngreen"}}>B A C K {locat}</Text></TouchableOpacity>
