@@ -48,11 +48,11 @@ useEffect(() => {
       const locat = <Text style={{color: "white"}}>{results.location.name}</Text>
     return (
       <View style={styles.container}>
-        <TouchableOpacity onPress={() => setSelected(false)} style={{marginRight: "80%", marginTop: "5%", marginLeft: "1%"}}><Text style={{color: "red"}}>B A C K {locat}</Text></TouchableOpacity>
+        <TouchableOpacity onPress={() => setSelected(false)} style={{marginRight: "80%", marginTop: "5%"}}><Text style={{color: "red"}}>B A C K {locat}</Text></TouchableOpacity>
         
 
 
-        <DataTable style={{marginBottom: "25%"}}>
+        <DataTable style={{marginBottom: "20%"}}>
 
         <DataTable.Row>
         <DataTable.Cell><Text style={{color: "red"}}>N0W</Text></DataTable.Cell>
