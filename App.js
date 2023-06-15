@@ -128,6 +128,8 @@ useEffect(() => {
 
     </DataTable>
 
+    <TouchableOpacity style={{width: "100%", alignItems: "center"}}><Text style={{color: "red", paddingTop: "5%"}}>HOURLY</Text></TouchableOpacity>
+
         <StatusBar style="auto" />
       </View>
     )}
