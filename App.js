@@ -45,10 +45,10 @@ useEffect(() => {
 
   if (selected){
     try{
-      const locat = <Text style={{color: "red"}}>{results.location.name}</Text>
+      const locat = <Text style={{color: "white"}}>{results.location.name}</Text>
     return (
       <View style={styles.container}>
-        <TouchableOpacity onPress={() => setSelected(false)} style={{marginRight: "80%"}}><Text style={{color: "lawngreen"}}>B A C K {locat}</Text></TouchableOpacity>
+        <TouchableOpacity onPress={() => setSelected(false)} style={{marginRight: "80%"}}><Text style={{color: "red"}}>B A C K {locat}</Text></TouchableOpacity>
         
 
 
@@ -135,7 +135,7 @@ useEffect(() => {
       return (
         <View style={styles.container}>
           <Text style={{color: 'lawngreen'}}>CHOOSE YOUR CITY:</Text>
-          <TextInput onSubmitEditing = {() => show()} onChangeText={newText => setCity(newText)} style={{backgroundColor: 'darkgrey', width: "40%", marginTop: "3%", textAlign:"center", color: "red"}}></TextInput>
+          <TextInput onSubmitEditing = {() => show()} onChangeText={newText => setCity(newText)} style={{backgroundColor: 'darkgrey', width: "40%", marginTop: "3%", textAlign:"center", color: "lawngreen"}}></TextInput>
           <Text style={{color: "red"}}>Such city does not exist!</Text>
           <StatusBar style="auto" />
         </View>
@@ -146,7 +146,7 @@ useEffect(() => {
     return (
       <View style={styles.container}>
         <Text style={{color: 'lawngreen'}}>CHOOSE YOUR CITY:</Text>
-        <TextInput onSubmitEditing = {() => show()} onChangeText={newText => setCity(newText)} style={{backgroundColor: 'darkgrey', width: "40%", marginTop: "3%", textAlign:"center", color: "red"}}></TextInput>
+        <TextInput onSubmitEditing = {() => show()} onChangeText={newText => setCity(newText)} style={{backgroundColor: 'darkgrey', width: "40%", marginTop: "3%", textAlign:"center", color: "lawngreen"}}></TextInput>
         <StatusBar style="auto" />
       </View>
     );
