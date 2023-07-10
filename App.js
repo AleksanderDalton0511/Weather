@@ -79,7 +79,7 @@ useEffect(() => {
 
     </DataTable>
 
-      <TouchableOpacity onPress={() => setToday(false)} style={{backgroundColor: "darkgrey", paddingRight: "5%", paddingLeft: "5%"}}><Text style={{color: "red"}}>{word}</Text></TouchableOpacity>
+      <TouchableOpacity onPress={(prevCheck) => setToday(prevCheck => !prevCheck)} style={{backgroundColor: "darkgrey", paddingRight: "5%", paddingLeft: "5%"}}><Text style={{color: "red"}}>{word}</Text></TouchableOpacity>
 
     <DataTable style={{marginTop: "5%", backgroundColor: "#7B858D"}}>
 
