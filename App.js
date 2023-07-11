@@ -55,80 +55,80 @@ try {
         <DataTable style={{marginBottom: "20%"}}>
 
         <DataTable.Row>
-        <DataTable.Cell><Text style={{color: "red"}}>N0W</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "white"}}>{results.current.temp_c} C</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "white"}}>{results.current.condition.text}</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>N0W</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "white", fontSize: 18}}>{results.current.temp_c} C</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "white", fontSize: 18}}>{results.current.condition.text}</Text></DataTable.Cell>
       </DataTable.Row>
 
         <DataTable.Row>
-        <DataTable.Cell><Text style={{color: "red"}}>DAYTIME</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "white"}}>{results.forecast.forecastday[0].astro.sunrise}</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "white"}}>{results.forecast.forecastday[0].astro.sunset}</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>DAYTIME</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "white", fontSize: 18}}>{results.forecast.forecastday[0].astro.sunrise}</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "white", fontSize: 18}}>{results.forecast.forecastday[0].astro.sunset}</Text></DataTable.Cell>
       </DataTable.Row>
 
     </DataTable>
 
-      <TouchableOpacity onPress={(prevCheck) => setToday(prevCheck => !prevCheck)} style={{backgroundColor: "darkgrey", paddingRight: "5%", paddingLeft: "5%", paddingTop: "1%", paddingBottom: "1%"}}><Text style={{color: "red"}}>{word}</Text></TouchableOpacity>
+      <TouchableOpacity onPress={(prevCheck) => setToday(prevCheck => !prevCheck)} style={{backgroundColor: "darkgrey", paddingRight: "5%", paddingLeft: "5%", paddingTop: "1%", paddingBottom: "1%"}}><Text style={{color: "red", fontSize: 18}}>{word}</Text></TouchableOpacity>
 
     <DataTable style={{marginTop: "5%", backgroundColor: "#7B858D"}}>
 
         <DataTable.Row>
-        <DataTable.Cell><Text style={{color: "white"}}>00:00</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "red"}}>{results.forecast.forecastday[day].hour[0].temp_c} C</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "white", fontSize: 18}}>00:00</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.forecast.forecastday[day].hour[0].temp_c} C</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.current.condition.text}</Text></DataTable.Cell>
       </DataTable.Row>
 
       <DataTable.Row>
-        <DataTable.Cell><Text style={{color: "white"}}>03:00</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "red"}}>{results.forecast.forecastday[day].hour[3].temp_c} C</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "white", fontSize: 18}}>03:00</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.forecast.forecastday[day].hour[3].temp_c} C</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.current.condition.text}</Text></DataTable.Cell>
       </DataTable.Row>
 
       <DataTable.Row>
-        <DataTable.Cell><Text style={{color: "white"}}>06:00</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "red"}}>{results.forecast.forecastday[day].hour[6].temp_c} C</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "white", fontSize: 18}}>06:00</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.forecast.forecastday[day].hour[6].temp_c} C</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.current.condition.text}</Text></DataTable.Cell>
       </DataTable.Row>
 
       <DataTable.Row>
-        <DataTable.Cell><Text style={{color: "white"}}>09:00</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "red"}}>{results.forecast.forecastday[day].hour[9].temp_c} C</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "white", fontSize: 18}}>09:00</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.forecast.forecastday[day].hour[9].temp_c} C</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.current.condition.text}</Text></DataTable.Cell>
       </DataTable.Row>
 
       <DataTable.Row>
-        <DataTable.Cell><Text style={{color: "white"}}>12:00</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "red"}}>{results.forecast.forecastday[day].hour[12].temp_c} C</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "white", fontSize: 18}}>12:00</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.forecast.forecastday[day].hour[12].temp_c} C</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.current.condition.text}</Text></DataTable.Cell>
       </DataTable.Row>
 
       <DataTable.Row>
-        <DataTable.Cell><Text style={{color: "white"}}>15:00</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "red"}}>{results.forecast.forecastday[day].hour[15].temp_c} C</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "white", fontSize: 18}}>15:00</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.forecast.forecastday[day].hour[15].temp_c} C</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.current.condition.text}</Text></DataTable.Cell>
       </DataTable.Row>
 
       <DataTable.Row>
-        <DataTable.Cell><Text style={{color: "white"}}>18:00</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "red"}}>{results.forecast.forecastday[day].hour[18].temp_c} C</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "white", fontSize: 18}}>18:00</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.forecast.forecastday[day].hour[18].temp_c} C</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.current.condition.text}</Text></DataTable.Cell>
       </DataTable.Row>
 
       <DataTable.Row>
-        <DataTable.Cell><Text style={{color: "white"}}>21:00</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "red"}}>{results.forecast.forecastday[day].hour[21].temp_c} C</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "white", fontSize: 18}}>21:00</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.forecast.forecastday[day].hour[21].temp_c} C</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.current.condition.text}</Text></DataTable.Cell>
       </DataTable.Row>
 
       <DataTable.Row>
-        <DataTable.Cell><Text style={{color: "white"}}>23:00</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "red"}}>{results.forecast.forecastday[day].hour[23].temp_c} C</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "white", fontSize: 18}}>23:00</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.forecast.forecastday[day].hour[23].temp_c} C</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.current.condition.text}</Text></DataTable.Cell>
       </DataTable.Row>
 
     </DataTable>
 
-    <TouchableOpacity style={{width: "100%", alignItems: "center"}}><Text style={{color: "white", paddingTop: "5%"}}>H O U R L Y</Text></TouchableOpacity>
+    <TouchableOpacity style={{width: "100%", alignItems: "center"}}><Text style={{color: "white", paddingTop: "5%", fontSize: 18}}>H O U R L Y</Text></TouchableOpacity>
 
       </View>
     )}
