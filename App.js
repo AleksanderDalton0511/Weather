@@ -75,55 +75,55 @@ try {
         <DataTable.Row>
         <DataTable.Cell><Text style={{color: "white", fontSize: 18}}>00:00</Text></DataTable.Cell>
         <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.forecast.forecastday[day].hour[0].temp_c} C</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.current.condition.text}</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.forecast.forecastday[day].hour[0].condition.text}</Text></DataTable.Cell>
       </DataTable.Row>
 
       <DataTable.Row>
         <DataTable.Cell><Text style={{color: "white", fontSize: 18}}>03:00</Text></DataTable.Cell>
         <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.forecast.forecastday[day].hour[3].temp_c} C</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.current.condition.text}</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.forecast.forecastday[day].hour[3].condition.text}</Text></DataTable.Cell>
       </DataTable.Row>
 
       <DataTable.Row>
         <DataTable.Cell><Text style={{color: "white", fontSize: 18}}>06:00</Text></DataTable.Cell>
         <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.forecast.forecastday[day].hour[6].temp_c} C</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.current.condition.text}</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.forecast.forecastday[day].hour[6].condition.text}</Text></DataTable.Cell>
       </DataTable.Row>
 
       <DataTable.Row>
         <DataTable.Cell><Text style={{color: "white", fontSize: 18}}>09:00</Text></DataTable.Cell>
         <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.forecast.forecastday[day].hour[9].temp_c} C</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.current.condition.text}</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.forecast.forecastday[day].hour[9].condition.text}</Text></DataTable.Cell>
       </DataTable.Row>
 
       <DataTable.Row>
         <DataTable.Cell><Text style={{color: "white", fontSize: 18}}>12:00</Text></DataTable.Cell>
         <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.forecast.forecastday[day].hour[12].temp_c} C</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.current.condition.text}</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.forecast.forecastday[day].hour[12].condition.text}</Text></DataTable.Cell>
       </DataTable.Row>
 
       <DataTable.Row>
         <DataTable.Cell><Text style={{color: "white", fontSize: 18}}>15:00</Text></DataTable.Cell>
         <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.forecast.forecastday[day].hour[15].temp_c} C</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.current.condition.text}</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.forecast.forecastday[day].hour[15].condition.text}</Text></DataTable.Cell>
       </DataTable.Row>
 
       <DataTable.Row>
         <DataTable.Cell><Text style={{color: "white", fontSize: 18}}>18:00</Text></DataTable.Cell>
         <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.forecast.forecastday[day].hour[18].temp_c} C</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.current.condition.text}</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.forecast.forecastday[day].hour[18].condition.text}</Text></DataTable.Cell>
       </DataTable.Row>
 
       <DataTable.Row>
         <DataTable.Cell><Text style={{color: "white", fontSize: 18}}>21:00</Text></DataTable.Cell>
         <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.forecast.forecastday[day].hour[21].temp_c} C</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.current.condition.text}</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.forecast.forecastday[day].hour[21].condition.text}</Text></DataTable.Cell>
       </DataTable.Row>
 
       <DataTable.Row>
         <DataTable.Cell><Text style={{color: "white", fontSize: 18}}>23:00</Text></DataTable.Cell>
         <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.forecast.forecastday[day].hour[23].temp_c} C</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.current.condition.text}</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red", fontSize: 18}}>{results.forecast.forecastday[day].hour[23].condition.text}</Text></DataTable.Cell>
       </DataTable.Row>
 
     </DataTable>
