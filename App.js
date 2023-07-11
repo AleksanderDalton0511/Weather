@@ -20,10 +20,8 @@ try {
 	console.error(error);
 }
 }
-useEffect(() => {
-    request();
-  });
   function show(){
+    request();
     setSelected(true);
   }
 
