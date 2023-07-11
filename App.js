@@ -1,23 +1,9 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, TextInput, View, Button, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, TextInput, View, TouchableOpacity } from 'react-native';
 import React, { useEffect, useState } from 'react';
 import { DataTable } from 'react-native-paper';
 export default function App() {
   const[results, setResults] = useState([]);
   const[city, setCity] = useState('');
-var today = new Date();
-var dd = today.getDate();
-var mm = today.getMonth()+1; 
-var yyyy = today.getFullYear();
-if(dd<10) 
-{
-    dd='0'+dd;
-} 
-if(mm<10) 
-{
-    mm='0'+mm;
-} 
-today = mm+'-'+dd+'-'+yyyy;
 const request = async () => {const url = 'https://weatherapi-com.p.rapidapi.com/forecast.json?q=' + city + '&days=3';
 const options = {
 	method: 'GET',
@@ -141,7 +127,6 @@ useEffect(() => {
 
     <TouchableOpacity style={{width: "100%", alignItems: "center"}}><Text style={{color: "white", paddingTop: "5%"}}>H O U R L Y</Text></TouchableOpacity>
 
-        <StatusBar style="auto" />
       </View>
     )}
     catch (error) {
@@ -150,7 +135,6 @@ useEffect(() => {
           <Text style={{color: 'lawngreen'}}>CHOOSE YOUR CITY:</Text>
           <TextInput onSubmitEditing = {() => show()} onChangeText={newText => setCity(newText)} style={{backgroundColor: 'darkgrey', width: "40%", marginTop: "3%", textAlign:"center", color: "lawngreen"}}></TextInput>
           <Text style={{color: "red"}}>Such city does not exist!</Text>
-          <StatusBar style="auto" />
         </View>
       );
     }
@@ -160,7 +144,6 @@ useEffect(() => {
       <View style={styles.container}>
         <Text style={{color: 'lawngreen'}}>CHOOSE YOUR CITY:</Text>
         <TextInput onSubmitEditing = {() => show()} onChangeText={newText => setCity(newText)} style={{backgroundColor: 'darkgrey', width: "40%", marginTop: "3%", textAlign:"center", color: "lawngreen"}}></TextInput>
-        <StatusBar style="auto" />
       </View>
     );
   }
