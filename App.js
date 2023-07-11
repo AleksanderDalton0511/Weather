@@ -41,9 +41,14 @@ try {
       }
     try{
       const locat = <Text style={{color: "white"}}>{results.location.name}</Text>
+
+      function setSelectedFalse(){
+        setSelected(false);
+        setToday(true);
+      }
     return (
       <View style={styles.container}>
-        <TouchableOpacity onPress={() => setSelected(false)} style={{marginRight: "80%", marginTop: "5%"}}><Text style={{color: "red"}}>B A C K {locat}</Text></TouchableOpacity>
+        <TouchableOpacity onPress={setSelectedFalse} style={{marginRight: "80%", marginTop: "5%"}}><Text style={{color: "red"}}>B A C K {locat}</Text></TouchableOpacity>
         
 
 
