@@ -111,7 +111,7 @@ try {
 
     </DataTable>
 
-      <TouchableOpacity onPress={(prevCheck) => setToday(prevCheck => !prevCheck)} style={{backgroundColor: "darkgrey", paddingRight: "5%", paddingLeft: "5%", paddingTop: "1%", paddingBottom: "1%"}}><Text style={{color: "red", fontSize: 18}}>{word}</Text></TouchableOpacity>
+      <TouchableOpacity onPress={(prevCheck) => setToday(prevCheck => !prevCheck)} style={{backgroundColor: "darkgrey", paddingRight: "5%", paddingLeft: "5%", paddingTop: "1%", paddingBottom: "1%"}}><Text style={{color: "red"}}>{word}</Text></TouchableOpacity>
 
     <DataTable style={{marginTop: "5%", backgroundColor: "#7B858D"}}>
 
@@ -180,7 +180,7 @@ try {
         <View style={styles.container}>
           <Text style={{color: 'lawngreen'}}>CHOOSE YOUR CITY:</Text>
           <TextInput onSubmitEditing = {() => show()} onChangeText={newText => setCity(newText)} style={{backgroundColor: 'darkgrey', width: "40%", marginTop: "3%", textAlign:"center", color: "lawngreen"}}></TextInput>
-          <TouchableOpacity style={{backgroundColor: "lawngreen"}} onPress={getDeviceCurrentLocation}><Text>saf</Text></TouchableOpacity>
+          <TouchableOpacity style={{backgroundColor: "lawngreen"}} onPress={getDeviceCurrentLocation}><Text>My position</Text></TouchableOpacity>
           <Text style={{color: "red"}}>Such city does not exist!</Text>
         </View>
       );
@@ -191,7 +191,7 @@ try {
       <View style={styles.container}>
         <Text style={{color: 'lawngreen'}}>CHOOSE YOUR CITY:</Text>
         <TextInput onSubmitEditing = {() => show()} onChangeText={newText => setCity(newText)} style={{backgroundColor: 'darkgrey', width: "40%", marginTop: "3%", textAlign:"center", color: "lawngreen"}}></TextInput>
-        <TouchableOpacity style={{backgroundColor: "lawngreen"}} onPress={getDeviceCurrentLocation}><Text>saf</Text></TouchableOpacity>
+        <TouchableOpacity style={{backgroundColor: "lawngreen"}} onPress={getDeviceCurrentLocation}><Text>My position</Text></TouchableOpacity>
       </View>
     );
   }
