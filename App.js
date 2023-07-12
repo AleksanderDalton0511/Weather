@@ -1,5 +1,5 @@
 import GeoLocation from 'react-native-geolocation-service';
-import { StyleSheet, Text, TextInput, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, TextInput, View, TouchableOpacity, PermissionsAndroid } from 'react-native';
 import React, { useState } from 'react';
 import { DataTable } from 'react-native-paper';
 export default function App() {
@@ -17,7 +17,6 @@ try {
 	const response = await fetch(url, options);
 	const result = await response.json();
   setResults(result);
-  console.log(result);
 } catch (error) {
 	console.error(error);
 }
@@ -53,7 +52,6 @@ try {
         GeoLocation.getCurrentPosition(
           (position) => {
             resolve(position);
-            console.log(position);
             setPosition(position);
           },
           (error) => {
