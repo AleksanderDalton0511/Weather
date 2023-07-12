@@ -1,3 +1,4 @@
+import GeoLocation from 'react-native-geolocation-service';
 import { StyleSheet, Text, TextInput, View, TouchableOpacity } from 'react-native';
 import React, { useEffect, useState } from 'react';
 import { DataTable } from 'react-native-paper';
@@ -24,6 +25,28 @@ try {
     request();
     setSelected(true);
   }
+
+  
+    const getDeviceCurrentLocation = async () => {
+      return new Promise((resolve, reject) =>
+        GeoLocation.getCurrentPosition(
+          (position) => {
+            resolve(position);
+            console.log(position);
+          },
+          (error) => {
+            reject(error);
+          },
+          {
+            enableHighAccuracy: true, // Whether to use high accuracy mode or not
+            timeout: 15000, // Request timeout
+            maximumAge: 10000 // How long previous location will be cached
+          }
+        )
+      );
+    };
+
+  
 
   const [selected, setSelected] = useState(false);
 
@@ -147,6 +170,7 @@ try {
       <View style={styles.container}>
         <Text style={{color: 'lawngreen'}}>CHOOSE YOUR CITY:</Text>
         <TextInput onSubmitEditing = {() => show()} onChangeText={newText => setCity(newText)} style={{backgroundColor: 'darkgrey', width: "40%", marginTop: "3%", textAlign:"center", color: "lawngreen"}}></TextInput>
+        <TouchableOpacity onPress={getDeviceCurrentLocation}><Text>saf</Text></TouchableOpacity>
       </View>
     );
   }
