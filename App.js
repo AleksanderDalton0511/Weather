@@ -5,6 +5,7 @@ import { DataTable } from 'react-native-paper';
 export default function App() {
   const[results, setResults] = useState([]);
   const[city, setCity] = useState('');
+  const[isDaily, setDaily] = useState(false);
 const request = async () => {const url = 'https://weatherapi-com.p.rapidapi.com/forecast.json?q=' + city + '&days=3';
 const options = {
 	method: 'GET',
@@ -87,31 +88,10 @@ try {
         setSelected(false);
         setToday(true);
       }
-    return (
-      <View style={styles.container}>
-        <TouchableOpacity onPress={setSelectedFalse} style={{marginRight: "80%", marginTop: "5%"}}><Text style={{color: "red"}}>B A C K {locat}</Text></TouchableOpacity>
-        
 
-
-        <DataTable style={{marginBottom: "20%"}}>
-
-        <DataTable.Row>
-        <DataTable.Cell><Text style={{color: "red"}}>N0W</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "white"}}>{results.current.temp_c} C</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "white"}}>{results.current.condition.text}</Text></DataTable.Cell>
-      </DataTable.Row>
-
-        <DataTable.Row>
-        <DataTable.Cell><Text style={{color: "red"}}>DAYTIME</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "white"}}>{results.forecast.forecastday[0].astro.sunrise}</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "white"}}>{results.forecast.forecastday[0].astro.sunset}</Text></DataTable.Cell>
-      </DataTable.Row>
-
-    </DataTable>
-
-      <TouchableOpacity onPress={(prevCheck) => setToday(prevCheck => !prevCheck)} style={{backgroundColor: "darkgrey", paddingRight: "5%", paddingLeft: "5%", paddingTop: "1%", paddingBottom: "1%"}}><Text style={{color: "red"}}>{word}</Text></TouchableOpacity>
-
-    <DataTable style={{marginTop: "5%", backgroundColor: "#7B858D"}}>
+      let data;
+      if(isDaily){
+        data = <DataTable style={{marginTop: "5%", backgroundColor: "#7B858D"}}>
 
         <DataTable.Row>
         <DataTable.Cell><Text style={{color: "white"}}>00:00</Text></DataTable.Cell>
@@ -168,8 +148,93 @@ try {
       </DataTable.Row>
 
     </DataTable>
+      }
+      else{
+        data = <DataTable style={{marginTop: "5%", backgroundColor: "#7B858D"}}>
 
-    <TouchableOpacity style={{width: "100%", alignItems: "center"}}><Text style={{color: "white", paddingTop: "5%", fontSize: 18}}>H O U R L Y</Text></TouchableOpacity>
+        <DataTable.Row>
+        <DataTable.Cell><Text style={{color: "white"}}>test</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.forecast.forecastday[day].hour[0].temp_c} C</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.forecast.forecastday[day].hour[0].condition.text}</Text></DataTable.Cell>
+      </DataTable.Row>
+
+      <DataTable.Row>
+        <DataTable.Cell><Text style={{color: "white"}}>03:00</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.forecast.forecastday[day].hour[3].temp_c} C</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.forecast.forecastday[day].hour[3].condition.text}</Text></DataTable.Cell>
+      </DataTable.Row>
+
+      <DataTable.Row>
+        <DataTable.Cell><Text style={{color: "white"}}>06:00</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.forecast.forecastday[day].hour[6].temp_c} C</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.forecast.forecastday[day].hour[6].condition.text}</Text></DataTable.Cell>
+      </DataTable.Row>
+
+      <DataTable.Row>
+        <DataTable.Cell><Text style={{color: "white"}}>09:00</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.forecast.forecastday[day].hour[9].temp_c} C</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.forecast.forecastday[day].hour[9].condition.text}</Text></DataTable.Cell>
+      </DataTable.Row>
+
+      <DataTable.Row>
+        <DataTable.Cell><Text style={{color: "white"}}>12:00</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.forecast.forecastday[day].hour[12].temp_c} C</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.forecast.forecastday[day].hour[12].condition.text}</Text></DataTable.Cell>
+      </DataTable.Row>
+
+      <DataTable.Row>
+        <DataTable.Cell><Text style={{color: "white"}}>15:00</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.forecast.forecastday[day].hour[15].temp_c} C</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.forecast.forecastday[day].hour[15].condition.text}</Text></DataTable.Cell>
+      </DataTable.Row>
+
+      <DataTable.Row>
+        <DataTable.Cell><Text style={{color: "white"}}>18:00</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.forecast.forecastday[day].hour[18].temp_c} C</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.forecast.forecastday[day].hour[18].condition.text}</Text></DataTable.Cell>
+      </DataTable.Row>
+
+      <DataTable.Row>
+        <DataTable.Cell><Text style={{color: "white"}}>21:00</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.forecast.forecastday[day].hour[21].temp_c} C</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.forecast.forecastday[day].hour[21].condition.text}</Text></DataTable.Cell>
+      </DataTable.Row>
+
+      <DataTable.Row>
+        <DataTable.Cell><Text style={{color: "white"}}>23:00</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.forecast.forecastday[day].hour[23].temp_c} C</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.forecast.forecastday[day].hour[23].condition.text}</Text></DataTable.Cell>
+      </DataTable.Row>
+
+    </DataTable>
+      }
+    return (
+      <View style={styles.container}>
+        <TouchableOpacity onPress={setSelectedFalse} style={{marginRight: "80%", marginTop: "5%"}}><Text style={{color: "red"}}>B A C K {locat}</Text></TouchableOpacity>
+        
+
+
+        <DataTable style={{marginBottom: "20%"}}>
+
+        <DataTable.Row>
+        <DataTable.Cell><Text style={{color: "red"}}>N0W</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "white"}}>{results.current.temp_c} C</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "white"}}>{results.current.condition.text}</Text></DataTable.Cell>
+      </DataTable.Row>
+
+        <DataTable.Row>
+        <DataTable.Cell><Text style={{color: "red"}}>DAYTIME</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "white"}}>{results.forecast.forecastday[0].astro.sunrise}</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "white"}}>{results.forecast.forecastday[0].astro.sunset}</Text></DataTable.Cell>
+      </DataTable.Row>
+
+    </DataTable>
+
+      <TouchableOpacity onPress={(prevCheck) => setToday(prevCheck => !prevCheck)} style={{backgroundColor: "darkgrey", paddingRight: "5%", paddingLeft: "5%", paddingTop: "1%", paddingBottom: "1%"}}><Text style={{color: "red"}}>{word}</Text></TouchableOpacity>
+
+    {data}
+
+    <TouchableOpacity onPress={(prevCheck) => setDaily(prevCheck => !prevCheck)} style={{width: "100%", alignItems: "center"}}><Text style={{color: "white", paddingTop: "5%", fontSize: 18}}>H O U R L Y</Text></TouchableOpacity>
 
       </View>
     )}
