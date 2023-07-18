@@ -178,15 +178,15 @@ try {
         <DataTable>
 
         <DataTable.Row>
-        <DataTable.Cell><Text style={{color: "red"}}>N0W</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "white"}}>{results.current.temp_c} C</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "white"}}>{results.current.condition.text}</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "white"}}>N0W</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.current.temp_c} C</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
       </DataTable.Row>
 
         <DataTable.Row>
-        <DataTable.Cell><Text style={{color: "red"}}>DAYTIME</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "white"}}>{results.forecast.forecastday[0].astro.sunrise}</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "white"}}>{results.forecast.forecastday[0].astro.sunset}</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "white"}}>DAYTIME</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.forecast.forecastday[0].astro.sunrise}</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.forecast.forecastday[0].astro.sunset}</Text></DataTable.Cell>
       </DataTable.Row>
 
     </DataTable>
