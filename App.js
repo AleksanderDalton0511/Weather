@@ -6,6 +6,7 @@ export default function App() {
   const[results, setResults] = useState([]);
   const[city, setCity] = useState('');
   const[isDaily, setDaily] = useState(false);
+  let margin = "33%";
 const request = async () => {const url = 'https://weatherapi-com.p.rapidapi.com/forecast.json?q=' + city + '&days=3';
 const options = {
 	method: 'GET',
@@ -73,6 +74,7 @@ try {
   if (selected){
     if (isDaily){
       word = "TODAY";
+      margin = "103%";
       }
       else{
         word = "DAILY";
@@ -191,7 +193,7 @@ try {
 
     </DataTable>
 
-      <TouchableOpacity onPress={(prevCheck) => setDaily(prevCheck => !prevCheck)} style={{backgroundColor: "darkgrey", paddingRight: "5%", paddingLeft: "5%", paddingTop: "1%", paddingBottom: "1%", marginTop: "33%"}}><Text style={{color: "red"}}>{word}</Text></TouchableOpacity>
+      <TouchableOpacity onPress={(prevCheck) => setDaily(prevCheck => !prevCheck)} style={{backgroundColor: "darkgrey", paddingRight: "5%", paddingLeft: "5%", paddingTop: "1%", paddingBottom: "1%", marginTop: `${ margin }`}}><Text style={{color: "red"}}>{word}</Text></TouchableOpacity>
 
     {data}
 
