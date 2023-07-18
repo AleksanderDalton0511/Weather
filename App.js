@@ -69,15 +69,12 @@ try {
 
   const [selected, setSelected] = useState(false);
 
-  let day;
   let word;
   if (selected){
     if (isDaily){
-      day = 0;
       word = "TODAY";
       }
       else{
-        day = 1;
         word = "DAILY";
       }
     try{
@@ -178,7 +175,7 @@ try {
         
 
 
-        <DataTable style={{marginBottom: "20%"}}>
+        <DataTable>
 
         <DataTable.Row>
         <DataTable.Cell><Text style={{color: "red"}}>N0W</Text></DataTable.Cell>
@@ -194,7 +191,7 @@ try {
 
     </DataTable>
 
-      <TouchableOpacity onPress={(prevCheck) => setDaily(prevCheck => !prevCheck)} style={{backgroundColor: "darkgrey", paddingRight: "5%", paddingLeft: "5%", paddingTop: "1%", paddingBottom: "1%"}}><Text style={{color: "red"}}>{word}</Text></TouchableOpacity>
+      <TouchableOpacity onPress={(prevCheck) => setDaily(prevCheck => !prevCheck)} style={{backgroundColor: "darkgrey", paddingRight: "5%", paddingLeft: "5%", paddingTop: "1%", paddingBottom: "1%", marginTop: "33%"}}><Text style={{color: "red"}}>{word}</Text></TouchableOpacity>
 
     {data}
 
