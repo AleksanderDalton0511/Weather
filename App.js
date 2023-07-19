@@ -1,5 +1,5 @@
 import GeoLocation from 'react-native-geolocation-service';
-import { StyleSheet, Text, TextInput, View, TouchableOpacity, PermissionsAndroid } from 'react-native';
+import { StyleSheet, Text, TextInput, View, TouchableOpacity, PermissionsAndroid, Image } from 'react-native';
 import React, { useState } from 'react';
 import { DataTable } from 'react-native-paper';
 export default function App() {
@@ -118,7 +118,7 @@ try {
         <DataTable.Row>
         <DataTable.Cell><Text style={{color: "white"}}>00:00</Text></DataTable.Cell>
         <DataTable.Cell><Text style={{color: "red"}}>{results.forecast.forecastday[0].hour[0].temp_c} C</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "red"}}>{results.forecast.forecastday[0].hour[0].condition.text}</Text></DataTable.Cell>
+        <DataTable.Cell><Image source = {{uri:'https://cdn.weatherapi.com/weather/64x64/day/113.png', width: 32, height: 32,}}/></DataTable.Cell>
       </DataTable.Row>
 
       <DataTable.Row>
