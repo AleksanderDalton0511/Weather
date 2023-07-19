@@ -118,7 +118,7 @@ try {
         <DataTable.Row>
         <DataTable.Cell><Text style={{color: "white"}}>00:00</Text></DataTable.Cell>
         <DataTable.Cell><Text style={{color: "red"}}>{results.forecast.forecastday[0].hour[0].temp_c} C</Text></DataTable.Cell>
-        <DataTable.Cell><Image source = {{uri:'https://cdn.weatherapi.com/weather/64x64/day/113.png', width: 32, height: 32,}}/></DataTable.Cell>
+        <DataTable.Cell><Image source = {{uri:results.forecast.forecastday[0].hour[0].condition.icon, width: 55, height: 25,}}/></DataTable.Cell>
       </DataTable.Row>
 
       <DataTable.Row>
