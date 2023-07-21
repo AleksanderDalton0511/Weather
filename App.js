@@ -94,19 +94,19 @@ try {
         <DataTable.Row>
         <DataTable.Cell><Text style={{color: "white"}}>TODAY</Text></DataTable.Cell>
         <DataTable.Cell><Text style={{color: "red"}}>{results.forecast.forecastday[0].day.avgtemp_c} C</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "red"}}>{results.forecast.forecastday[0].day.condition.text}</Text></DataTable.Cell>
+        <DataTable.Cell><Image source = {{uri:'https:' + results.forecast.forecastday[2].day.condition.icon, width: 32, height: 23}}/></DataTable.Cell>
       </DataTable.Row>
 
       <DataTable.Row>
       <DataTable.Cell><Text style={{color: "white"}}>TOMORROW</Text></DataTable.Cell>
         <DataTable.Cell><Text style={{color: "red"}}>{results.forecast.forecastday[1].day.avgtemp_c} C</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "red"}}>{results.forecast.forecastday[1].day.condition.text}</Text></DataTable.Cell>
+        <DataTable.Cell><Image source = {{uri:'https:' + results.forecast.forecastday[2].day.condition.icon, width: 32, height: 23}}/></DataTable.Cell>
       </DataTable.Row>
 
       <DataTable.Row>
       <DataTable.Cell><Text style={{color: "white"}}>AFTERTOMORROW</Text></DataTable.Cell>
         <DataTable.Cell><Text style={{color: "red"}}>{results.forecast.forecastday[2].day.avgtemp_c} C</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "red"}}>{results.forecast.forecastday[2].day.condition.text}</Text></DataTable.Cell>
+        <DataTable.Cell><Image source = {{uri:'https:' + results.forecast.forecastday[2].day.condition.icon, width: 32, height: 23}}/></DataTable.Cell>
       </DataTable.Row>
 
       
