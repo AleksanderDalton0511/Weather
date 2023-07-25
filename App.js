@@ -6,7 +6,7 @@ export default function App() {
   const[results, setResults] = useState([]);
   const[city, setCity] = useState('');
   const[isDaily, setDaily] = useState(false);
-  let margin = "33%";
+  let margin = "20%";
 const request = async () => {const url = 'https://weatherapi-com.p.rapidapi.com/forecast.json?q=' + city + '&days=3';
 const options = {
 	method: 'GET',
@@ -74,13 +74,13 @@ try {
   if (selected){
     if (isDaily){
       word = "TODAY";
-      margin = "103%";
+      margin = "90%";
       }
       else{
         word = "DAILY";
       }
     try{
-      const locat = <Text style={{color: "white"}}>{results.location.name}</Text>
+      const locat = <Text style={{color: "red"}}>{results.location.name}</Text>
 
       function setSelectedFalse(){
         setSelected(false);
@@ -178,6 +178,12 @@ try {
 
 
         <DataTable>
+
+        <DataTable.Row>
+        <DataTable.Cell><Text style={{color: "white"}}>LOCATION</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{locat}</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.location.country}</Text></DataTable.Cell>
+      </DataTable.Row>
 
         <DataTable.Row>
         <DataTable.Cell><Text style={{color: "white"}}>N0W</Text></DataTable.Cell>
