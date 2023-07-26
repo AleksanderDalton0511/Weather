@@ -180,9 +180,9 @@ try {
         <DataTable>
 
         <DataTable.Row>
-        <DataTable.Cell><Text style={{color: "white"}}>LOCATION</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "white"}}>INFO</Text></DataTable.Cell>
         <DataTable.Cell><Text style={{color: "red"}}>{locat}</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "red"}}>{results.location.country}</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "red"}}>{results.location.localtime}</Text></DataTable.Cell>
       </DataTable.Row>
 
         <DataTable.Row>
