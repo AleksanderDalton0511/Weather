@@ -186,9 +186,9 @@ try {
       </DataTable.Row>
 
         <DataTable.Row>
-        <DataTable.Cell><Text style={{color: "white"}}>N0W</Text></DataTable.Cell>
+        <DataTable.Cell><Text style={{color: "white"}}>NOW</Text></DataTable.Cell>
         <DataTable.Cell><Text style={{color: "red"}}>{results.current.temp_c} C</Text></DataTable.Cell>
-        <DataTable.Cell><Text style={{color: "red"}}>{results.current.condition.text}</Text></DataTable.Cell>
+        <DataTable.Cell><Image source = {{uri:'https:' + results.current.condition.icon, width: 32, height: 23}}/></DataTable.Cell>
       </DataTable.Row>
 
         <DataTable.Row>
