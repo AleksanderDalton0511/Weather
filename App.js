@@ -173,7 +173,7 @@ try {
       }
     return (
       <View style={styles.container}>
-        <TouchableOpacity onPress={setSelectedFalse} style={{paddingTop: "1%", marginRight: "85%", marginTop: "5%", backgroundColor: "darkgrey"}}><Image style={{width: 40, height: 40}} source={require('./back.png')} /></TouchableOpacity>
+        <TouchableOpacity onPress={setSelectedFalse} style={{paddingTop: "1%", marginRight: "85%", marginTop: "5%"}}><Image style={{width: 40, height: 40}} source={require('./back.png')} /></TouchableOpacity>
         
 
 
