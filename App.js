@@ -210,8 +210,8 @@ try {
         <View style={styles.container}>
           <Text style={{color: 'lawngreen'}}>CHOOSE YOUR CITY:</Text>
           <TextInput onSubmitEditing = {() => show()} onChangeText={newText => setCity(newText)} style={{backgroundColor: 'darkgrey', width: "40%", marginTop: "3%", textAlign:"center", color: "lawngreen"}}></TextInput>
-          <TouchableOpacity style={{backgroundColor: "lawngreen"}} onPress={getDeviceCurrentLocation}><Text>My position</Text></TouchableOpacity>
           <Text style={{color: "red"}}>Such city does not exist!</Text>
+          <TouchableOpacity style={{marginTop: "2%", backgroundColor: "darkgrey", borderColor: "lawngreen", borderStyle: "solid", borderWidth: 2}} onPress={getDeviceCurrentLocation}><Text style={{margin: "2%", color: "lawngreen"}}>MY POSITION</Text></TouchableOpacity>
         </View>
       );
     }
@@ -221,7 +221,7 @@ try {
       <View style={styles.container}>
         <Text style={{color: 'lawngreen'}}>CHOOSE YOUR CITY:</Text>
         <TextInput onSubmitEditing = {() => show()} onChangeText={newText => setCity(newText)} style={{backgroundColor: 'darkgrey', width: "40%", marginTop: "3%", textAlign:"center", color: "lawngreen"}}></TextInput>
-        <TouchableOpacity style={{backgroundColor: "lawngreen"}} onPress={getDeviceCurrentLocation}><Text>My position</Text></TouchableOpacity>
+        <TouchableOpacity style={{marginTop: "6%", backgroundColor: "darkgrey", borderColor: "lawngreen", borderStyle: "solid", borderWidth: 2}} onPress={getDeviceCurrentLocation}><Text style={{margin: "2%", color: "lawngreen"}}>MY POSITION</Text></TouchableOpacity>
       </View>
     );
   }
