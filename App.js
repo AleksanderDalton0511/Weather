@@ -48,7 +48,6 @@ try {
     const [usePosition, setPosition] = useState();
     
     const getDeviceCurrentLocation = async () => {
-      request2();
       setSelected(true);
       return new Promise((resolve, reject) =>
         GeoLocation.getCurrentPosition(
@@ -67,6 +66,10 @@ try {
         )
       );
     };
+
+    if (usePosition){
+      request2();
+    }
 
   const [selected, setSelected] = useState(false);
 
