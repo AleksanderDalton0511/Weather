@@ -61,7 +61,6 @@ try {
       let location = await Location.getCurrentPositionAsync({});
       setLocation(location);
       setTrigger(true);
-      console.log(usePosition);
     };
 
   const [selected, setSelected] = useState(false);
