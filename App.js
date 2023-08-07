@@ -1,6 +1,6 @@
-import GeoLocation from 'react-native-geolocation-service';
+import * as Location from 'expo-location';
 import { StyleSheet, Text, TextInput, View, TouchableOpacity, PermissionsAndroid, Image } from 'react-native';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { DataTable } from 'react-native-paper';
 export default function App() {
   const[results, setResults] = useState([]);
@@ -36,6 +36,7 @@ try {
     const response = await fetch(url, options);
     const result = await response.json();
     setResults(result);
+    setSelected(true);
   } catch (error) {
     console.error(error);
   }
@@ -45,30 +46,31 @@ try {
     setSelected(true);
   }
 
-    const [usePosition, setPosition] = useState();
-    
-    const getDeviceCurrentLocation = async () => {
-      request2();
-      setSelected(true);
-      return new Promise((resolve, reject) =>
-        GeoLocation.getCurrentPosition(
-          (position) => {
-            resolve(position);
-            setPosition(position);
-          },
-          (error) => {
-            reject(error);
-          },
-          {
-            enableHighAccuracy: true, // Whether to use high accuracy mode or not
-            timeout: 15000, // Request timeout
-            maximumAge: 10000 // How long previous location will be cached
-          }
-        )
-      );
+    const [usePosition, setLocation] = useState(null);
+
+    const [trigger, setTrigger] = useState(false);
+
+    async function MyLocation() {
+      
+      let { status } = await Location.requestForegroundPermissionsAsync();
+      if (status !== 'granted') {
+        setErrorMsg('Permission to access location was denied');
+        return;
+      }
+
+      let location = await Location.getCurrentPositionAsync({});
+      setLocation(location);
+      setTrigger(true);
+      console.log(usePosition);
     };
 
   const [selected, setSelected] = useState(false);
+
+  useEffect(() => {
+    (async () => {
+      request2();
+    })();
+  }, [trigger]);
 
   let word;
   if (selected){
@@ -85,6 +87,7 @@ try {
       function setSelectedFalse(){
         setSelected(false);
         setDaily(false);
+        setTrigger(false);
       }
 
       let data;
@@ -211,7 +214,7 @@ try {
           <Text style={{color: 'white'}}>CHOOSE YOUR CITY:</Text>
           <TextInput onSubmitEditing = {() => show()} onChangeText={newText => setCity(newText)} style={{backgroundColor: 'darkgrey', width: "40%", marginTop: "3%", textAlign:"center", color: "red"}}></TextInput>
           <Text style={{color: "red"}}>Such city does not exist!</Text>
-          <TouchableOpacity style={{marginTop: "2%", backgroundColor: "#7B858D"}} onPress={getDeviceCurrentLocation}><Text style={{margin: "2%", color: "red"}}>MY POSITION</Text></TouchableOpacity>
+          <TouchableOpacity style={{marginTop: "2%", backgroundColor: "#7B858D"}} onPress={MyLocation}><Text style={{margin: "2%", color: "red"}}>MY POSITION</Text></TouchableOpacity>
         </View>
       );
     }
@@ -221,7 +224,7 @@ try {
       <View style={styles.container}>
         <Text style={{color: 'white'}}>CHOOSE YOUR CITY:</Text>
         <TextInput onSubmitEditing = {() => show()} onChangeText={newText => setCity(newText)} style={{backgroundColor: 'darkgrey', width: "40%", marginTop: "3%", textAlign:"center", color: "red"}}></TextInput>
-        <TouchableOpacity style={{marginTop: "6%", backgroundColor: "#7B858D"}} onPress={getDeviceCurrentLocation}><Text style={{margin: "2%", color: "red"}}>MY POSITION</Text></TouchableOpacity>
+        <TouchableOpacity style={{marginTop: "6%", backgroundColor: "#7B858D"}} onPress={MyLocation}><Text style={{margin: "2%", color: "red"}}>MY POSITION</Text></TouchableOpacity>
       </View>
     );
   }
