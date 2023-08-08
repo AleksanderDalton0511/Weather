@@ -1,3 +1,4 @@
+import { BackHandler } from "react-native";
 import * as Location from 'expo-location';
 import { StyleSheet, Text, TextInput, View, TouchableOpacity, PermissionsAndroid, Image } from 'react-native';
 import React, { useState, useEffect } from 'react';
@@ -63,6 +64,18 @@ try {
       setLocation(location);
       setTrigger(true);
     };
+
+    function handleBackButtonClick() {
+      setSelectedFalse();
+      return true;
+    }
+    
+    useEffect(() => {
+      BackHandler.addEventListener("hardwareBackPress", handleBackButtonClick);
+      return () => {
+        BackHandler.removeEventListener("hardwareBackPress", handleBackButtonClick);
+      };
+    }, []);
 
   const [selected, setSelected] = useState(false);
   const [safer, setSafer] = useState(true);
