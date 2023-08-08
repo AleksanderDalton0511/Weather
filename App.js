@@ -37,6 +37,7 @@ try {
     const result = await response.json();
     setResults(result);
     setSelected(true);
+    setSafer(false);
   } catch (error) {
     console.error(error);
   }
@@ -57,17 +58,24 @@ try {
         setErrorMsg('Permission to access location was denied');
         return;
       }
-
+      setSafer(true);
       let location = await Location.getCurrentPositionAsync({});
       setLocation(location);
       setTrigger(true);
     };
 
   const [selected, setSelected] = useState(false);
+  const [safer, setSafer] = useState(true);
 
   useEffect(() => {
     (async () => {
+      if(safer){
       request2();
+      }
+      else{
+        setSelected(false);
+        setDaily(false);
+      }
     })();
   }, [trigger]);
 
