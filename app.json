@@ -2,7 +2,7 @@
   "expo": {
     "name": "Weather",
     "slug": "Weather",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -20,11 +20,18 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+        "backgroundColor": "#ffffff",
+        "versionCode": 2
+      },
+      "package": "com.aleksanderdalton0511.Weather"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "ea5fff16-d1bc-4adf-8ebf-352894abb619"
+      }
     }
   }
 }
