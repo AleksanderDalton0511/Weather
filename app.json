@@ -23,7 +23,8 @@
         "backgroundColor": "#ffffff",
         "versionCode": 2
       },
-      "package": "com.aleksanderdalton0511.Weather"
+      "package": "com.aleksanderdalton0511.Weather",
+      "versionCode": 2
     },
     "web": {
       "favicon": "./assets/favicon.png"
