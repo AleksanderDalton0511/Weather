@@ -226,7 +226,7 @@ try {
       <TouchableOpacity onPress={(prevCheck) => setDaily(prevCheck => !prevCheck)} style={{backgroundColor: "darkgrey", paddingRight: "5%", paddingLeft: "5%", paddingTop: "1%", paddingBottom: "1%", marginTop: `${ margin }`}}><Text style={{color: "red"}}>{word}</Text></TouchableOpacity>
 
     {data}
-    <StatusBar style="auto" />
+    <StatusBar hidden />
       </View>
     )}
     catch (error) {
@@ -236,7 +236,7 @@ try {
           <TextInput onSubmitEditing = {() => show()} onChangeText={newText => setCity(newText)} style={{backgroundColor: 'darkgrey', width: "40%", marginTop: "3%", textAlign:"center", color: "red"}}></TextInput>
           <Text style={{color: "red"}}>Such city does not exist!</Text>
           <TouchableOpacity style={{marginTop: "2%", backgroundColor: "#7B858D"}} onPress={MyLocation}><Text style={{margin: "2%", color: "red"}}>MY POSITION</Text></TouchableOpacity>
-          <StatusBar style="auto" />
+          <StatusBar hidden />
         </View>
       );
     }
@@ -247,7 +247,7 @@ try {
         <Text style={{color: 'white'}}>CHOOSE YOUR CITY:</Text>
         <TextInput onSubmitEditing = {() => show()} onChangeText={newText => setCity(newText)} style={{backgroundColor: 'darkgrey', width: "40%", marginTop: "3%", textAlign:"center", color: "red"}}></TextInput>
         <TouchableOpacity style={{marginTop: "6%", backgroundColor: "#7B858D"}} onPress={MyLocation}><Text style={{margin: "2%", color: "red"}}>MY POSITION</Text></TouchableOpacity>
-        <StatusBar style="auto" />
+        <StatusBar hidden />
       </View>
     );
   }
