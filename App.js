@@ -1,5 +1,6 @@
 import { BackHandler } from "react-native";
 import { StatusBar } from 'expo-status-bar';
+import * as NavigationBar from "expo-navigation-bar";
 import * as Location from 'expo-location';
 import { StyleSheet, Text, TextInput, View, TouchableOpacity, PermissionsAndroid, Image } from 'react-native';
 import React, { useState, useEffect } from 'react';
@@ -25,6 +26,9 @@ try {
 	console.error(error);
 }
 }
+
+NavigationBar.setVisibilityAsync("hidden");
+NavigationBar.setBehaviorAsync("overlay-swipe");
 
   const request2 = async () => {const url = 'https://weatherapi-com.p.rapidapi.com/forecast.json?q=' + usePosition.coords.latitude+","+usePosition.coords.longitude + '&days=3';
   const options = {
