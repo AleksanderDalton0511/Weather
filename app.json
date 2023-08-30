@@ -4,7 +4,7 @@
     "slug": "Weather",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "thumbnail_Sunny.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
