@@ -7,7 +7,7 @@
     "icon": "thumbnail_Sunny.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "thumbnail_Sunny.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -19,14 +19,14 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "thumbnail_Sunny.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.aleksanderdalton0511.Weather",
-      "versionCode": 5
+      "versionCode": 6
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "thumbnail_Sunny.png"
     },
     "extra": {
       "eas": {
